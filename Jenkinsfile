@@ -14,13 +14,13 @@ pipeline {
             }
         }
 
-        stage('Run Containers') {
+        stage('Start All Services') {
             steps {
                 sh 'docker-compose up -d'
             }
         }
 
-        stage('Verify') {
+        stage('Verify Services') {
             steps {
                 sh 'docker ps'
             }
